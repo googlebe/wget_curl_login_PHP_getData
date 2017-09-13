@@ -1,0 +1,48 @@
+document.writeln("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>");
+var max_ad_width=160,max_ad_height=360,min_ad_width=120,min_ad_height=240,spaceleft=parseInt(bo_width)-max_ad_width,right_col_size=40,menu_height=25,exclude="nicoleclark,tdjous@gmail.com,3587,cashflow28,12531,xalekd,eric19740521,special829,pork0188,greenroam,8841,mornlunar,kebee,12791,beatleswangtw,12518,zenk67,an88an00,allen,blacktale,wiwivictory,vosion,pots0611,12619,5012,syvia930,2162,jyi.shieh@gmail.com,3691,9547,12464,xkellyx,ezfun,cemwfha,benny99,alvauma,maya9036,molly92,YOURACCOUNT,327,genefala,hanting1234,117,2088,7677,newmagu,rayiikimo,greenteado,11397,ylego2,12339,12339,pixnet_chia,blogger2266@gmail.com,tboy888,tc1688,lemon74088,kerorokeroro1,providejts,11501,11915,sam_ronaldo,janis,g30601,box695251,aderpeggy,cute811020,coolvideo,wawa1126,a2010892678,11568,ferrariCA,louker,11373,avocado308,aden0408,10881,mrspai,gn00116743,gogok34,a8034a8034,sabaijerry,young050,f0930884090,elvis",exclude_array=exclude.split(","),blocking=!1,ad_size=160;40>spaceleft?(ad_size=min_ad_width,right_col_size=bo_width-min_ad_width,bo_height=min_ad_height+54+menu_height,portraitlist_height=bo_height):(ad_size=max_ad_width,right_col_size=bo_width-max_ad_width,bo_height=max_ad_height+54+120+menu_height,portraitlist_height=bo_height),document.writeln("<link href='http://fonts.googleapis.com/css?family=Milonga' rel='stylesheet' type='text/css'>"),document.writeln("<div id='frame' style='width:"+bo_width+"px;height:"+bo_height+"px;'>"),document.writeln("<div style='width:"+bo_width+"px;'>"),document.writeln("<div style='background-color:#059fe8;height:54px;text-align:center;color:#fff;cursor:pointer;' onClick=window.open('http://pingurs.com/read/daily/1?prompt=pros')>"),document.writeln("<div style='font-size:20px;line-height:135%;padding-top:3px;font-family:Milonga, Verdana, Tahoma;'>Pingurs</div>"),document.writeln("<div style='font-size:12px;line-height:135%;font-family:Tahoma, Helvetica;'>部落格發展聯盟</div>"),document.writeln("</div></div>"),document.writeln("<div style='background-color:#1e861e;color:#9ff789;float:left;font-size:16px;font-family:Tahoma, Helvetica;width:33%;height:"+menu_height+"px;line-height:23px;text-align:center;cursor:pointer;' onClick=\"document.getElementById('frame').innerHTML='<iframe frameborder=0 width="+bo_width+" height="+bo_height+" scrolling=No style=margin:0; src=http://www.blog-orbit.com/jsFrame.php?app=me&id="+bo_id+"&w="+bo_width+"&h="+bo_height+"></iframe>'\">我"),document.writeln("</div>"),document.writeln("<div style='background-color:#c79b02;color:#f0f2e2;float:left;font-size:16px;font-family:Tahoma, Helvetica;width:34%;height:"+menu_height+"px;line-height:23px;text-align:center;cursor:pointer' onClick=\"document.getElementById('frame').innerHTML='<iframe frameborder=0 width="+bo_width+" height="+bo_height+" scrolling=No style=margin:0; src=http://www.blog-orbit.com/jsFrame.php?app=read&id="+bo_id+"&w="+bo_width+"&h="+bo_height+"></iframe>'\">讀"),document.writeln("</div>"),document.writeln("<div style='background-color:#b10100;color:#fe808a;float:left;font-size:16px;font-family:Tahoma, Helvetica;width:33%;height:"+menu_height+"px;line-height:23px;text-align:center;cursor:pointer;' onClick=\"document.getElementById('frame').innerHTML='<iframe frameborder=0 width="+bo_width+" height="+bo_height+" scrolling=No style=margin:0; src=http://www.blog-orbit.com/jsFrame.php?app=rent&id="+bo_id+"&w="+bo_width+"&h="+bo_height+"></iframe>'\">賺"),document.writeln("</div>");for(var i=0;i<exclude_array.length;i++)exclude_array[i]==bo_id&&(blocking=!0);blocking===!0?document.writeln("<div style='width:"+(bo_width-right_col_size)+"px;height:"+(bo_width-right_col_size)/bo_width*600+"px;background-size:cover;float:left;background-image:url(http://www.blog-orbit.com/widgetRevo/img/banner_160_600.jpg);cursor:pointer;' onClick=window.open('http://pingurs.com/read/daily/1?prompt=pros')></div>"):ads_deploy(spaceleft,ad_size),document.writeln("<div style='float:left;width:"+right_col_size+"px;'>"),document.writeln("<iframe frameborder=0 width="+right_col_size+" height="+portraitlist_height+" scrolling=No style=margin:0; src=http://www.blog-orbit.com/widgetRevo/cache/popularBloggers.html></iframe>"),document.writeln("</div>"),document.writeln("</div>");
+
+function ads_deploy(e, t) {
+if (e < 40) {
+document.writeln("<div style='clear:both;float:left;width:"+t+"px'>");
+document.writeln("<script type=\"text\/javascript\"><!--");
+document.writeln("google_ad_client = \"ca-pub-3242367961870715\";");
+document.writeln("google_ad_slot = \"1487931722\";");
+document.writeln("google_ad_width = 120;");
+document.writeln("google_ad_height = 240;");
+document.writeln("\/\/-->");
+document.writeln("<\/script>");
+document.writeln("<script type=\"text\/javascript\"");
+document.writeln("src=\"http:\/\/pagead2.googlesyndication.com\/pagead\/show_ads.js\">");
+document.writeln("<\/script> ");
+document.writeln("");
+document.writeln("</div>");
+} else {
+// if (Math.floor(Math.random() * 2) === 0) {
+if (1) {
+document.writeln("<div style='float:left;width:160px'>");
+document.writeln("<iframe frameborder=0 width=160 height=120 scrolling=No style=margin:0; src=http://www.blog-orbit.com/widgetRevo/cache/popularStory.html></iframe>");
+document.writeln("<div style='width:160px;height:600px;margin-top:-3px'>");
+document.writeln("<script type=\"text\/javascript\"><!--");
+document.writeln("google_ad_client = \"ca-pub-3242367961870715\";");
+document.writeln("google_ad_slot = \"7262031532\";");
+document.writeln("google_ad_width = 160;");
+document.writeln("google_ad_height = 600;");
+document.writeln("\/\/-->");
+document.writeln("<\/script>");
+document.writeln("<script type=\"text\/javascript\"");
+document.writeln("src=\"http:\/\/pagead2.googlesyndication.com\/pagead\/show_ads.js\">");
+document.writeln("<\/script> ");
+document.writeln("</div>");
+document.writeln("</div>");
+} else {
+document.writeln("<div style='float:left;width:160px'>");
+document.writeln("<iframe frameborder=0 width=160 height=120 scrolling=No style=margin:0; src=http://www.blog-orbit.com/widgetRevo/cache/popularStory.html></iframe>");
+document.writeln("<div style='width:160px;height:360px;'>");
+document.writeln("<script>var count = 3;</script>");
+document.writeln("</div>");
+document.writeln("</div>");     
+}
+}
+}
+
+

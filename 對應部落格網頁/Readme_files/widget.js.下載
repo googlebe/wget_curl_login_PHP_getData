@@ -1,0 +1,48 @@
+var kk=location.hostname;console.log(kk);function getacc()
+{var ai=window.location.hostname;ai=ai.replace(".","");if(ai.indexOf("www")!="-1")
+{ai=ai.replace("www","");ai=ai.replace(".","");}
+if(ai.indexOf("-")!="-1")
+{ai=ai.replace("-","_");ai=ai.replace(".","");}
+if(ai.indexOf("blogspot")!="-1")
+{ai=ai.substring(0,ai.indexOf('blogspot'));ai=ai+"blogspot"
+ai=ai.replace(".","");}
+ai=ai.replace(".","");return ai;}
+console.log(getacc());function getdomain()
+{var aj=window.location.hostname;if(aj.indexOf("www.")!="-1")
+{aj=aj.replace("www.","");}
+if(aj.indexOf("blogspot")!="-1")
+{aj=aj.substring(0,aj.indexOf('blogspot'));aj=aj+"blogspot.com"}
+return aj;}
+console.log(getdomain());var alivestats_wid=0;var all=document.getElementsByTagName("script");for(var i=0,max=all.length;i<max;i++)
+if(all[i].src==="https://alivestats.com/feed/widget.js"){alivestats_wid=1;break;}
+var all=document.getElementsByTagName("script");for(var i=0,max=all.length;i<max;i++)
+if(all[i].src==="https://alivestats.com/widget.js")
+{all[i].parentNode.style.display="block";all[i].parentNode.style.visibility="visible";break;}
+function getQueryVariable(variable)
+{var query=window.location.search.substring(1);var vars=query.split("&");for(var i=0;i<vars.length;i++){var pair=vars[i].split("=");if(pair[0]==variable){return pair[1];}}
+return(false);}
+var utm_source=getQueryVariable("utm_source");console.log(utm_source);var utm_medium=getQueryVariable("utm_medium");console.log(utm_medium);var utm_campaign=getQueryVariable("utm_campaign");console.log(utm_campaign);var utm_term=getQueryVariable("utm_term");console.log(utm_term);var utm_content=getQueryVariable("utm_content");console.log(utm_content);(function(window){{var unknown='Unknown OS Platform';var unknown2='Generic Browser';var screenSize='';if(screen.width){width=(screen.width)?screen.width:'';height=(screen.height)?screen.height:'';screenSize+=''+ width+" X "+ height;}
+var nAgt=navigator.userAgent;var browser=unknown2;var clientStrings1=[{b:'AliveStats App',r:/AliveStats App/},{b:'Firefox',r:/Firefox/},{b:'QQ Browser',r:/QQbrowser/},{b:'Nokia Browser',r:/Nokiabrowser/},{b:'MS Edge',r:/Edge/},{b:'Opera',r:/Opera/},{b:'Chromium',r:/Chromium/},{b:'Chrome',r:/Chrome/},{b:'UC Browser',r:/(UCWeb|UCBrowser)/},{b:'Handheld Browser',r:/Mobile/},{b:'TheWorld Browser',r:/Theworld/},{b:'Yandex Browser',r:/Yabrowser/},{b:'CocCoc Browser',r:/Coccoc/},{b:'Netscape',r:/Netscape/},{b:'Safari',r:/Safari/},{b:'Konqueror',r:/Konqueror/},{b:'Maxthon',r:/Maxthon/},{b:'Internet Explorer',r:/MSIE/}];for(var id in clientStrings1){var cs1=clientStrings1[id];if(cs1.r.test(nAgt)){browser=cs1.b;break;}}
+var os=unknown;var clientStrings=[{s:'Windows 10',r:/(Windows 10.0|Windows NT 10.0)/},{s:'Windows 8.1',r:/(Windows 8.1|Windows NT 6.3)/},{s:'Windows 8',r:/(Windows 8|Windows NT 6.2)/},{s:'Windows 7',r:/(Windows 7|Windows NT 6.1)/},{s:'Windows Vista',r:/Windows NT 6.0/},{s:'Windows Server 2003',r:/Windows NT 5.2/},{s:'Windows XP',r:/(Windows NT 5.1|Windows XP)/},{s:'Windows 2000',r:/(Windows NT 5.0|Windows 2000)/},{s:'Windows ME',r:/(Win 9x 4.90|Windows ME)/},{s:'Windows 98',r:/(Windows 98|Win98)/},{s:'Windows 95',r:/(Windows 95|Win95|Windows_95)/},{s:'Windows NT 4.0',r:/(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/},{s:'Windows CE',r:/Windows CE/},{s:'Windows 3.11',r:/Win16/},{s:'Android 1.5 CupCake',r:/Android 1.5/},{s:'Android 1.6 Donut',r:/Android 1.6/},{s:'Android 2.0 Eclair',r:/(Android 2.0|Android 2.0.1|Android 2.1)/},{s:'Android 2.2 Froyo',r:/(Android 2.2|Android 2.2.1|Android 2.2.2|Android 2.2.3|Android 2.2.4|Android 2.2.5|Android 2.2.6|Android 2.2.7|Android 2.2.8|Android 2.2.9)/},{s:'Android 2.3 Gingerbread',r:/(Android 2.3|Android 2.3.1|Android 2.3.2|Android 2.3.4|Android 2.3.4|Android 2.3.5|Android 2.3.6|Android 2.3.7)/},{s:'Android 3.0 Honeycomb',r:/(Android 3.0|Android 3.1|Android 3.2)/},{s:'Android 4.0 IceCream Sandwich',r:/(Android 4.0|Android 4.0.1|Android 4.0.2|Android 4.0.3|Android 4.0.4)/},{s:'Android 4.1 Jelly Bean',r:/(Android 4.1|Android 4.2|Android 4.3)/},{s:'Android 4.4 KitKat',r:/(Android 4.4|Android 4.4.1|Android 4.4.2|Android 4.4.3|Android 4.4.4)/},{s:'Android 5.0 Lollipop',r:/(Android 5.0|Android 5.1)/},{s:'Android 6.0 Marshmallow',r:/Android 6.0/},{s:'Android 7.0 Nougat',r:/Android 7.0/},{s:'Android',r:/Android/},{s:'Open BSD',r:/OpenBSD/},{s:'Sun OS',r:/SunOS/},{s:'Ubuntu',r:/Ubuntu/},{s:'Linux',r:/(Linux|X11)/},{s:'Java Platform',r:/Java/},{s:'Blackberry',r:/Blackberry/},{s:'Symbian',r:/Symbian/},{s:'Kindle',r:/(Kindle|Silk)/},{s:'iOS Phone',r:/iPhone/},{s:'iOS Tablet',r:/iPad/},{s:'iOS Pod',r:/iPod/},{s:'Windows Phone Os',r:/Windows Phone/},{s:'Bada OS',r:/Dada/},{s:'Xbox OS',r:/Xbox/},{s:'Xbox One OS',r:/Xbox One/},{s:'Play Station Portable',r:/Playstationportable/},{s:'Play Station 3',r:/Playstation3/},{s:'Play Station 4',r:/Playstation4/},{s:'Nintendo Wii OS',r:/Nintendo/},{s:'Chrome OS',r:/CrOS/},{s:'Mac OS X',r:/Mac OS X/},{s:'Mac OS',r:/(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/},{s:'QNX',r:/QNX/},{s:'Unix',r:/UNIX/},{s:'BeOS',r:/BeOS/},{s:'OS-2',r:/OS\/2/},{s:'Search Bot',r:/(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|AskJeeves\/Teoma|ia_archiver|Rambler|Yahoo|AbachoBOT|accoona|AcioRobot|ASPSeek|CocoCrawler|Dumbot|FAST-WebCrawler|GeonaBot|Gigabot|Lycos|MSRBOT|Scooter|AltaVista|IDBot|eStyle|Scrubby)/}];for(var id in clientStrings){var cs=clientStrings[id];if(cs.r.test(nAgt)){os=cs.s;break;}}}
+window.jscd={screen:screenSize,browser:browser,os:os};}(this));var ref=(document.referrer.split("/")[2]);var prop1;var prop2;var prop3;var que;function getRefQueryParam(a)
+{a=a.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");a=RegExp("[\\?&]"+a+"=([^&#]*)").exec(document.referrer);return a==null?"":a[1]};prop1=getRefQueryParam('q');if(typeof color=='undefined')
+{color="";}
+if(typeof nim_border_r!='undefined'&&nim_border_r!=false)
+nim_border_r=nim_border_r;else
+nim_border_r="false";if(typeof nim_width!='undefined'&&nim_width!=false)
+nim_width=nim_width;else
+nim_width="false";if(typeof nim_bgcolor!='undefined'&&nim_bgcolor!=false)
+nim_bgcolor=nim_bgcolor;else
+nim_bgcolor="false";if(typeof nim_border_c!='undefined'&&nim_border_c!=false)
+nim_border_c=nim_border_c;else
+nim_border_c="false";if(typeof nim_color!='undefined'&&nim_color!=false)
+nim_color=nim_color;else
+nim_color="false";if(typeof nim_online_size!='undefined'&&nim_online_size!=false)
+nim_online_size=nim_online_size;else
+nim_online_size="false";if(typeof nim_counter_size!='undefined'&&nim_counter_size!=false)
+nim_counter_size=nim_counter_size;else
+nim_counter_size="false";if(typeof nim_counter_h_size!='undefined'&&nim_counter_h_size!=false)
+nim_counter_h_size=nim_counter_h_size;else
+nim_counter_h_size="false";if(typeof nim_count=='undefined')
+{nim_count="false";}
+var isAdBlockActive=true;var acc=getacc();var domain=getdomain();document.write('\x3Cscript type="text/javascript" src="https://techniblogic.com/test/advert.js">\x3C/script>');document.write('\x3Cscript type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">\x3C/script>');document.write('\x3Cscript type="text/javascript" src="https://alivestats.com/ab.php?alivestats='+alivestats_wid+'">\x3C/script>');
